@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AlimentaCert — Manipulación de Alimentos</title>
+<style>
+:root{--o:#ff6500;--ink:#171717;--mut:#646b74;--cream:#fff7ef;--line:#eee4da;--green:#13795b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
+header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:20}
+.logo{font-size:25px;font-weight:900}.logo b{color:var(--o)}nav{display:flex;gap:22px;align-items:center;font-weight:700;font-size:14px}.btn{display:inline-block;background:var(--o);color:#fff;border:0;border-radius:13px;padding:14px 19px;font-weight:900;text-decoration:none;cursor:pointer}.ghost{background:#fff;color:#222;border:1px solid #ddd}
+.hero{max-width:1200px;margin:auto;padding:54px 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.kicker{color:var(--o);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px}.hero h1{font-size:58px;line-height:.98;letter-spacing:-2.7px;margin:13px 0 18px}.hero p{font-size:19px;line-height:1.55;color:var(--mut);max-width:650px}.heroimg{position:relative}.heroimg img{width:100%;height:520px;object-fit:cover;border-radius:30px}.price{position:absolute;bottom:20px;left:20px;background:#fff;padding:16px 20px;border-radius:17px;box-shadow:0 10px 35px #0002}.price strong{font-size:34px;color:var(--o)}.checks{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0;color:#3e454d;font-size:14px;font-weight:700}.checks span:before{content:"✓";color:var(--green);margin-right:6px}.actions{display:flex;gap:10px;flex-wrap:wrap}
+.band{background:#171717;color:#fff}.stats{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:24px}.stat{text-align:center;border-right:1px solid #ffffff22}.stat:last-child{border:0}.stat b{display:block;font-size:24px}.stat small{color:#bbb}
+section{padding:70px 24px}.wrap{max-width:1100px;margin:auto}.title{text-align:center;max-width:760px;margin:0 auto 34px}.title h2{font-size:40px;letter-spacing:-1.5px;margin:0 0 10px}.title p{color:var(--mut);line-height:1.6}
+.steps,.photos,.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff}.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff0e5;color:var(--o);font-weight:900}.card h3{font-size:20px}.card p{color:var(--mut);line-height:1.55}.photos .card{padding:0;overflow:hidden}.photos img{width:100%;height:210px;object-fit:cover}.photos .txt{padding:20px}.course{background:var(--cream)}.modules{display:grid;grid-template-columns:1fr 1fr;gap:12px}.module{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.module b{color:var(--o);margin-right:8px}.cert{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.paper{background:#fff;border:8px double #e6d7c8;box-shadow:0 20px 55px #0001;padding:42px;text-align:center;min-height:430px}.paper .seal{font-size:42px}.paper h3{font-family:Georgia,serif;font-size:28px}.paper .name{font-family:Georgia,serif;font-size:25px;border-bottom:1px solid #999;padding:12px}.qr{margin:18px auto;width:72px;height:72px;background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 50%/18px 18px}
+.faq details{max-width:850px;margin:10px auto;border:1px solid var(--line);border-radius:14px;padding:17px;background:#fff}summary{font-weight:800;cursor:pointer}.faq p{color:var(--mut)}
+.final{background:#171717;color:#fff;text-align:center}.final h2{font-size:42px;margin:0 0 10px}.final p{color:#bbb}.mobilebar{display:none}
+@media(max-width:760px){nav a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding:35px 18px}.hero h1{font-size:42px}.heroimg img{height:360px}.stats{grid-template-columns:1fr 1fr;gap:18px}.stat{border:0}.steps,.photos,.features,.modules,.cert{grid-template-columns:1fr}.title h2{font-size:32px}.mobilebar{display:block;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:10px;z-index:30}.mobilebar .btn{width:100%;text-align:center}}
+</style></head>
+<body>
+<header><div class="logo"><b>Alimenta</b>Cert</div><nav><a href="#curso">Temario</a><a href="#certificado">Certificado</a><a href="#empresas">Empresas</a><span>ES ▾</span><a class="btn" href="#examen">Hacer examen gratis</a></nav></header>
+
+<main>
+<div class="hero">
+<div><div class="kicker">Curso online · España · Actualizado 2026</div>
+<h1>Manipulación de Alimentos, fácil de aprender y rápido de acreditar.</h1>
+<p>Estudia gratis. Haz el examen gratis. <b>Paga solo cuando apruebes</b> y quieras emitir tu certificado de formación con código verificable.</p>
+<div class="checks"><span>Sin registro para empezar</span><span>Intentos ilimitados</span><span>100% online</span><span>ES · EN · RU · AR</span></div>
+<div class="actions"><a class="btn" href="#examen">Hacer examen gratis</a><a class="btn ghost" href="#curso">Ver temario</a></div>
+</div>
+<div class="heroimg"><img src="alimentacert_foto_hero.jpg"><div class="price"><small>Certificado al aprobar</small><br><strong>9,90 €</strong> <small>IVA incl.*</small></div></div>
+</div>
+
+<div class="band"><div class="stats"><div class="stat"><b>8</b><small>módulos prácticos</small></div><div class="stat"><b>20</b><small>preguntas finales</small></div><div class="stat"><b>80%</b><small>para aprobar</small></div><div class="stat"><b>4</b><small>idiomas</small></div></div></div>
+
+<section><div class="wrap"><div class="title"><h2>Consíguelo en 3 pasos</h2><p>Diseñado para que puedas aprender lo necesario sin perderte en trámites.</p></div>
+<div class="steps"><div class="card"><div class="num">1</div><h3>Aprende gratis</h3><p>Microlecciones claras, ejemplos reales y contenido adaptado al trabajo con alimentos.</p></div><div class="card"><div class="num">2</div><h3>Aprueba gratis</h3><p>20 preguntas aleatorias. Puedes repetir el examen sin pagar hasta alcanzar el 80%.</p></div><div class="card"><div class="num">3</div><h3>Emite tu certificado</h3><p>Después de aprobar introduces tus datos, pagas y recibes el certificado verificable.</p></div></div></div></section>
+
+<section class="course" id="curso"><div class="wrap"><div class="title"><div class="kicker">Contenido estrella</div><h2>Un curso corto, visual y realmente útil</h2><p>No queremos un PDF interminable. Cada módulo explica qué hacer, por qué y qué errores evitar.</p></div>
+<div class="photos"><div class="card"><img src="alimentacert_foto_hygiene.jpg"><div class="txt"><h3>Higiene personal</h3><p>Manos, ropa, heridas, síntomas y hábitos seguros.</p></div></div><div class="card"><img src="alimentacert_foto_work.jpg"><div class="txt"><h3>Trabajo seguro</h3><p>Contaminación cruzada, organización y buenas prácticas.</p></div></div><div class="card"><img src="alimentacert_foto_fridge.jpg"><div class="txt"><h3>Conservación</h3><p>Cadena de frío, recepción, almacenamiento y control.</p></div></div></div>
+<br><div class="modules">
+<div class="module"><b>01</b> Seguridad alimentaria y responsabilidad</div><div class="module"><b>02</b> Peligros biológicos, químicos y físicos</div>
+<div class="module"><b>03</b> Higiene personal y lavado de manos</div><div class="module"><b>04</b> Contaminación cruzada y alérgenos</div>
+<div class="module"><b>05</b> Tiempo, temperatura y cadena de frío</div><div class="module"><b>06</b> Limpieza, desinfección y plagas</div>
+<div class="module"><b>07</b> Información, trazabilidad y almacenamiento</div><div class="module"><b>08</b> APPCC y cultura de seguridad alimentaria</div>
+</div></div></section>
+
+<section id="examen"><div class="wrap"><div class="title"><div class="kicker">Sin riesgo</div><h2>Primero apruebas. Después decides si pagas.</h2><p>20 preguntas tipo test, tres opciones por pregunta, 80% para aprobar e intentos ilimitados. En la versión final, cada intento quedará registrado con su versión de contenido.</p><a class="btn" href="alimentacert_academia_integrada.html">Probar examen ahora</a></div></div></section>
+
+<section id="certificado"><div class="wrap cert"><div><div class="kicker">Documento verificable</div><h2 style="font-size:40px">Un certificado que parece profesional porque lo es.</h2><p>Nombre y apellidos, DNI/NIE, fecha, contenidos impartidos, entidad emisora, código único y QR de verificación. La consulta pública no mostrará el documento completo.</p><div class="checks"><span>PDF inmediato</span><span>Código único</span><span>QR público</span><span>Privacidad del DNI/NIE</span></div></div>
+<div class="paper"><div class="seal">✓</div><small>ALIMENTACERT · FORMACIÓN ALIMENTARIA</small><h3>Certificado de Formación en Manipulación de Alimentos</h3><p>Se certifica que</p><div class="name">Nombre del alumno</div><p>ha superado satisfactoriamente la formación y evaluación correspondiente.</p><div class="qr"></div><small>Código: AC-2026-XXXXXX · Verificación online</small></div></div></section>
+
+
+<section id="empresas" style="background:#fff7ef">
+<div class="wrap">
+ <div class="title"><div class="kicker">ALIMENTACERT EMPRESAS</div>
+ <h2>Forma a todo tu equipo desde un solo panel</h2>
+ <p>Restaurantes, hoteles, cafeterías, catering, supermercados y empresas alimentarias. Compra plazas, invita trabajadores y controla su progreso y certificados.</p></div>
+ <div class="steps">
+  <div class="card"><div class="num">10</div><h3>Equipo pequeño</h3><p>10 plazas · precio piloto 79 €</p><a class="btn" href="#empresa-demo">Solicitar acceso</a></div>
+  <div class="card" style="border:2px solid #ff6500"><div class="num">25</div><h3>Equipo profesional</h3><p>25 plazas · precio piloto 169 €</p><a class="btn" href="#empresa-demo">Solicitar acceso</a></div>
+  <div class="card"><div class="num">50</div><h3>Empresa</h3><p>50 plazas · precio piloto 299 €</p><a class="btn" href="#empresa-demo">Solicitar acceso</a></div>
+ </div>
+ <div id="empresa-demo" class="card" style="margin-top:20px">
+  <h3>Panel de empresa — prototipo</h3>
+  <p><b>Plazas:</b> 25 · <b>Asignadas:</b> 18 · <b>Aprobados:</b> 14 · <b>Pendientes:</b> 4</p>
+  <div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><tr><th style="text-align:left;padding:10px">Empleado</th><th>Curso</th><th>Estado</th><th>Certificado</th></tr>
+  <tr><td style="padding:10px">María G.</td><td>Manipulación</td><td>✓ Aprobado</td><td>Descargar</td></tr>
+  <tr><td style="padding:10px">David R.</td><td>Manipulación</td><td>En curso</td><td>—</td></tr>
+  <tr><td style="padding:10px">Sara A.</td><td>Alérgenos</td><td>✓ Aprobado</td><td>Descargar</td></tr></table></div>
+ </div>
+</div></section>
+<section class="faq"><div class="wrap"><div class="title"><h2>Preguntas frecuentes</h2></div>
+<details open><summary>¿Está “homologado por AESAN”?</summary><p>No utilizamos esa afirmación. AESAN explica que las entidades que imparten esta formación no necesitan homologación o autorización administrativa y tampoco deben presentarse como homologadas o avaladas por AESAN.</p></details>
+<details><summary>¿Tengo que pagar antes del examen?</summary><p>No. El planteamiento de AlimentaCert es estudiar y examinarte gratis; el pago llega únicamente después de aprobar si quieres emitir el certificado.</p></details>
+<details><summary>¿Puedo repetir el examen?</summary><p>Sí. El diseño contempla intentos ilimitados sin coste antes de la emisión del certificado.</p></details>
+<details><summary>¿En qué idiomas estará?</summary><p>Español, inglés, ruso y árabe. Las preguntas y respuestas aparecerán directamente en el idioma seleccionado.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap"><h2>Empieza gratis. Paga solo si apruebas.</h2><p>Manipulación de Alimentos · 9,90 € al emitir el certificado.</p><a class="btn" href="#examen">Hacer examen gratis</a></div></section>
+</main>
+<div class="mobilebar"><a class="btn" href="#examen">Hacer examen gratis · 9,90 € al aprobar</a></div>
+</body></html>
