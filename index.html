@@ -16,7 +16,17 @@ section{padding:70px 24px}.wrap{max-width:1100px;margin:auto}.title{text-align:c
 @media(max-width:760px){nav a:not(.btn){display:none}.hero{grid-template-columns:1fr;padding:35px 18px}.hero h1{font-size:42px}.heroimg img{height:360px}.stats{grid-template-columns:1fr 1fr;gap:18px}.stat{border:0}.steps,.photos,.features,.modules,.cert{grid-template-columns:1fr}.title h2{font-size:32px}.mobilebar{display:block;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:10px;z-index:30}.mobilebar .btn{width:100%;text-align:center}}
 </style></head>
 <body>
-<header><div class="logo"><b>Alimenta</b>Cert</div><nav><a href="#curso">Temario</a><a href="#certificado">Certificado</a><a href="#empresas">Empresas</a><span> Idiomas ▾</span><a class="btn" href="#examen">Hacer examen gratis</a></nav></header>
+<header><div class="logo"><b>Alimenta</b>Cert</div><nav><a href="#curso">Temario</a><a href="#certificado">Certificado</a><a href="#empresas">Empresas</a><select id="langSelect" onchange="cambiarIdioma(this.value)">
+
+  <option value="es">Español</option>
+
+  <option value="en">English</option>
+
+  <option value="ru">Русский</option>
+
+  <option value="ar">العربية</option>
+
+</select><a class="btn" href="#examen">Hacer examen gratis</a></nav></header>
 
 <main>
 <div class="hero">
@@ -78,4 +88,25 @@ section{padding:70px 24px}.wrap{max-width:1100px;margin:auto}.title{text-align:c
 <section class="final"><div class="wrap"><h2>Empieza gratis. Paga solo si apruebas.</h2><p>Manipulación de Alimentos · 9,90 € al emitir el certificado.</p><a class="btn" href="#examen">Hacer examen gratis</a></div></section>
 </main>
 <div class="mobilebar"><a class="btn" href="#examen">Hacer examen gratis · 9,90 € al aprobar</a></div>
+<script>
+
+function cambiarIdioma(lang){
+
+  const urls={
+
+    es:'index.html',
+
+    en:'index.html?lang=en',
+
+    ru:'index.html?lang=ru',
+
+    ar:'index.html?lang=ar'
+
+  };
+
+  window.location.href=urls[lang]||'index.html';
+
+}
+
+</script>
 </body></html>
