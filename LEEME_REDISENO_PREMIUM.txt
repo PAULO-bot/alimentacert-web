@@ -1,0 +1,33 @@
+ALIMENTACERT — REDISEÑO PREMIUM 2026 · REVISIÓN FINAL
+
+PAQUETE VISUAL REVISADO
+
+Archivos incluidos:
+- index.html
+- index-en.html
+- index-ar.html
+- index-ru.html
+- alimentacert_foto_hero.jpg
+- alimentacert_foto_hygiene.jpg
+- alimentacert_foto_work.jpg
+- alimentacert_foto_fridge.jpg
+
+IMPORTANTE:
+- Conserva alimentacert_academia_integrada.html en la raíz del repositorio: los botones de examen apuntan a ese archivo.
+- Este paquete sustituye las cuatro portadas y vuelve a incluir las cuatro imágenes para que la actualización visual quede autocontenida.
+- No borres pago-ok.html ni verificar.html si ya existen en el repositorio.
+
+REVISIÓN FINAL REALIZADA:
+- Enlaces internos comprobados: sin anclas rotas.
+- Botones principales de examen apuntan directamente a alimentacert_academia_integrada.html.
+- Enlaces de empresa que aún no tenían destino funcional sustituidos por “Próximamente / Coming soon / Скоро / قريبًا”.
+- Selector de idiomas comprobado en español, inglés, ruso y árabe.
+- Árabe con dir="rtl".
+- Atributos lang y etiquetas de accesibilidad revisados.
+- Rutas de las cuatro imágenes comprobadas.
+- JavaScript del selector de idioma validado sintácticamente.
+- Eliminado el asterisco de IVA que no tenía nota asociada.
+- Pie de página localizado en cada idioma.
+- Sin librerías ni fuentes externas.
+
+PRECIO MOSTRADO: 9,90 € por emisión del certificado tras aprobar.
