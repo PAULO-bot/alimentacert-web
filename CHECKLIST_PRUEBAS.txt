@@ -1,0 +1,15 @@
+[ ] Español, English, Русский, العربية cambian textos y RTL árabe
+[ ] Curso muestra 8 módulos en cada idioma
+[ ] Examen genera 20 preguntas sin repetir
+[ ] 15/20 no aprueba; 16/20 sí aprueba
+[ ] No se puede ir a pago sin intento aprobado
+[ ] Formulario rechaza campos vacíos/email inválido
+[ ] Stripe TEST crea Checkout por 9,90 EUR
+[ ] Cancelación no crea certificado
+[ ] pago-ok por URL manual no crea certificado
+[ ] Webhook con firma inválida devuelve 400
+[ ] checkout.session.completed + paid crea 1 pago y 1 certificado
+[ ] Reenvío del mismo evento no duplica pago/certificado
+[ ] Verificador devuelve código válido y no expone DNI/NIE
+[ ] Código inexistente devuelve no encontrado
+[ ] Móvil: navegación, curso, examen y formularios legibles
