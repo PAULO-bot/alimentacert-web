@@ -1,0 +1,15 @@
+ALIMENTACERT — PAQUETE MULTIDIOMA LISTO
+
+ARCHIVOS PARA SUBIR A GITHUB (los 4 HTML):
+- index.html       = Español
+- index-en.html    = English
+- index-ru.html    = Русский
+- index-ar.html    = العربية (RTL)
+
+El selector de idioma enlaza entre las cuatro páginas.
+Las imágenes se incluyen para que el paquete sea autocontenido. Si ya existen en el repositorio, no es necesario volver a subirlas.
+
+IMPORTANTE:
+- Este paquete traduce la PORTADA completa.
+- El botón de examen sigue apuntando al archivo existente alimentacert_academia_integrada.html.
+- No cambia Supabase, pagos ni el examen actual.
