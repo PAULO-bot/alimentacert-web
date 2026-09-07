@@ -1,33 +1,18 @@
-ALIMENTACERT PRO — PAQUETE FINAL
+ALIMENTACERT — RESTAURACIÓN FINAL
 
-QUÉ CAMBIA AL SUBIRLO
-- La portada deja de anunciar los alérgenos como herramienta gratuita.
-- AlimentaCert PRO se presenta a 12,90 €/mes.
-- Se integra la imagen publicitaria aprobada.
-- La página PRO contiene: platos ilimitados, empresa/logo, 14 alérgenos, trazas,
-  ficha técnica, ingredientes/cantidades, elaboración, nutrición, escandallo,
-  matriz, PDF/impresión, QR, edición/duplicado, historial y backup.
-- Se añade la pantalla “Mi suscripción” con estados Activo, Pago pendiente,
-  Impagado, Cancelado y Caducado.
+Este paquete conserva la portada principal y añade de nuevo Alérgenos como producto visual completo.
+Validado en los 4 idiomas:
+- Español
+- English
+- Русский
+- العربية
 
-PARA SUBIR AHORA A GITHUB
-1. Descomprime este ZIP.
-2. En alimentacert-web: Add file > Upload files.
-3. Arrastra TODOS los archivos y carpetas de este paquete.
-4. Commit changes.
-5. Espera el despliegue y pulsa Ctrl+F5 en la web.
+Incluye:
+- un solo selector de idioma con banderas;
+- ruso real;
+- alérgenos con foto propia;
+- 14 alérgenos / contaminación cruzada / consumidor / examen y certificado;
+- estadísticas sin números duplicados;
+- fotos originales incluidas.
 
-PAGO REAL
-El diseño y la lógica están preparados. Para cobrar de verdad:
-- crea un Payment Link de Stripe de 12,90 €/mes;
-- pégalo en config.js.
-
-BLOQUEO REAL POR IMPAGO
-El paquete incluye el esquema y funciones de backend para Supabase/Stripe.
-Para que el bloqueo sea seguro hay que configurar una vez Supabase, desplegar
-las Edge Functions y conectar el webhook de Stripe. Esto no puede sustituirse
-de forma segura por un simple HTML en GitHub Pages.
-
-IMPORTANTE
-No pongas claves secretas de Stripe ni la service_role de Supabase en config.js
-ni en GitHub Pages. Esas claves van únicamente como secretos del backend.
+Para publicar: sustituye en la raíz de alimentacert-web los archivos con el mismo nombre y haz un único commit.
