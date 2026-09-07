@@ -16,11 +16,27 @@ header{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;ali
 </style>
 </head><body>
 <header><div class="brand"><b>Alimenta</b>Cert <span style="font-size:11px;background:#171717;color:#fff;padding:4px 7px;border-radius:7px">PRO</span></div><div class="top"><button class="btn ghost small" onclick="exportBackup()">Copia de seguridad</button><button class="btn small" onclick="window.print()">PDF / imprimir</button></div></header>
-<section class="hero"><div class="heroin"><div><div class="ey">SOFTWARE PARA HOSTELERÍA · ESPAÑA</div><h1>Alérgenos, fichas y nutrición en un solo sitio.</h1><p>Platos ilimitados, logo, 14 alérgenos, trazas, ficha técnica, valores nutricionales, QR público, modificaciones e historial.</p><span class="pill">14 alérgenos UE</span><span class="pill">Trazas separadas</span><span class="pill">PDF profesional</span><span class="pill">Historial</span></div><div class="price"><small>PLAN PROFESIONAL</small><div><strong>12,90 €</strong> / mes</div><ul><li>Platos ilimitados</li><li>PDF, fichas y QR</li><li>Historial de cambios</li><li>Sin permanencia</li></ul><button class="btn" onclick="subscribe()">Suscribirme</button></div></div></section>
+<section class="hero"><div class="heroin"><div><div class="ey">SOFTWARE PARA HOSTELERÍA · ESPAÑA</div><h1>Alérgenos, fichas y nutrición en un solo sitio.</h1><p>Platos ilimitados, logo, 14 alérgenos, trazas, ficha técnica, valores nutricionales, QR público, modificaciones e historial.</p><span class="pill">14 alérgenos UE</span><span class="pill">Trazas separadas</span><span class="pill">PDF profesional</span><span class="pill">Historial</span></div><div><img src="alimentacert-pro-publicidad.png" alt="AlimentaCert PRO" style="width:100%;border-radius:18px;margin-bottom:14px"><div class="price"><small>PLAN PROFESIONAL</small><div><strong>12,90 €</strong> / mes</div><ul><li>Platos ilimitados</li><li>PDF, fichas y QR</li><li>Historial de cambios</li><li>Sin permanencia</li></ul><button class="btn" onclick="subscribe()">Suscribirme</button></div></div></div></section>
 <div class="shell">
 <nav class="nav" id="nav"></nav>
 <main class="main">
 <section class="card page" data-page="panel"><h2>Panel</h2><div class="sub">Resumen del establecimiento</div><div class="statrow"><div class="stat"><small>Platos</small><b id="sDishes">0</b></div><div class="stat"><small>Con alérgenos</small><b id="sAll">0</b></div><div class="stat"><small>Fichas completas</small><b id="sSheets">0</b></div><div class="stat"><small>Cambios guardados</small><b id="sHist">0</b></div></div><div class="warn" style="margin-top:14px">Los datos de alérgenos y trazas deben comprobarse con la receta real, etiquetas y fichas de proveedor. La herramienta organiza y documenta la información; no sustituye la verificación del operador alimentario.</div></section>
+
+
+<section class="card page hide" data-page="cuenta">
+  <h2>Mi suscripción</h2>
+  <div class="sub">Estado del plan AlimentaCert PRO.</div>
+  <div id="subscriptionCard" class="stat" style="max-width:620px">
+    <small>ESTADO</small>
+    <b id="subscriptionLabel">Comprobando…</b>
+    <p id="subscriptionMessage" class="sub" style="margin:7px 0 0"></p>
+  </div>
+  <div class="actions">
+    <button class="btn" onclick="subscribe()">Activar / renovar PRO</button>
+    <button class="btn ghost" onclick="refreshSubscription()">Actualizar estado</button>
+  </div>
+  <div class="warn">Estados previstos: <b>Activo</b>, <b>Pago pendiente</b>, <b>Impagado</b>, <b>Cancelado</b> y <b>Caducado</b>. En producción el estado debe llegar del backend mediante Stripe; no se acepta un valor manipulable desde el navegador como autorización.</div>
+</section>
 
 <section class="card page hide" data-page="empresa"><h2>Empresa y marca</h2><div class="sub">Estos datos aparecen en tus documentos.</div><div class="grid"><div class="field"><label>Nombre comercial</label><input id="company"></div><div class="field"><label>CIF/NIF (opcional)</label><input id="taxid"></div><div class="field wide"><label>Dirección</label><input id="address"></div><div class="field"><label>Teléfono</label><input id="phone"></div><div class="field"><label>Email</label><input id="email"></div><div class="field"><label>Logo</label><input id="logoFile" type="file" accept="image/*"></div><div><img id="logoPreview" class="logoPreview" alt="Logo"></div></div><div class="actions"><button class="btn" onclick="saveCompany()">Guardar datos</button></div></section>
 
@@ -41,18 +57,65 @@ header{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;ali
 <section class="card page hide" data-page="normativa"><h2>Normativa y control</h2><div class="legal"><p><b>Reglamento (UE) 1169/2011.</b> La herramienta estructura los 14 grupos del anexo II sobre sustancias o productos que causan alergias o intolerancias.</p><p><b>Real Decreto 126/2015.</b> En España desarrolla los requisitos de información alimentaria para alimentos sin envasar, envasados a petición del comprador y determinados supuestos de venta a distancia.</p><p><b>Responsabilidad del establecimiento.</b> Las plantillas y sugerencias no deben darse por válidas sin contrastar receta, ingredientes compuestos, etiquetas, fichas técnicas del proveedor y procedimientos de prevención de contaminación cruzada.</p><p><b>Nutrición.</b> Los campos nutricionales son voluntarios en esta herramienta. Si se publican, deben basarse en datos suficientemente fiables y mantenerse actualizados.</p></div></section>
 </main></div>
 
-<div id="paywall" class="paywall"><div class="paybox"><div class="ey">ALIMENTACERT PRO</div><h2>Activa tu gestión profesional</h2><p>Acceso a platos ilimitados, fichas técnicas, alérgenos y trazas, nutrición, PDF, QR, historial y copias de seguridad.</p><div class="priceLine">12,90 € / mes</div><button class="btn" onclick="subscribe()">Continuar al pago mensual</button><button class="btn ghost" onclick="demoUnlock()">Vista previa en este dispositivo</button><p style="font-size:11px;color:#777">La vista previa no sustituye una suscripción. Para producción, conecta el enlace de suscripción indicado en <b>config.js</b>.</p></div></div>
+<div id="paywall" class="paywall"><div class="paybox"><div class="ey">ALIMENTACERT PRO</div><h2>Activa tu gestión profesional</h2><p>Acceso a platos ilimitados, fichas técnicas, alérgenos y trazas, nutrición, PDF, QR, historial y copias de seguridad.</p><div class="priceLine">12,90 € / mes</div><button class="btn" onclick="subscribe()">Continuar al pago mensual</button><button class="btn ghost" onclick="showDemo()">Ver demostración</button><p style="font-size:11px;color:#777">El acceso comercial se valida con el estado de suscripción. Si existe impago, cancelación o caducidad, el acceso PRO queda bloqueado.</p></div></div>
 <script src="config.js"></script>
 <script>
 const A=[['gluten','Gluten','🌾'],['crust','Crustáceos','🦐'],['egg','Huevos','🥚'],['fish','Pescado','🐟'],['peanut','Cacahuetes','🥜'],['soy','Soja','🫘'],['milk','Leche','🥛'],['nuts','Frutos de cáscara','🌰'],['celery','Apio','🥬'],['mustard','Mostaza','🟡'],['sesame','Sésamo','⚪'],['sulfites','Sulfitos','SO₂'],['lupin','Altramuces','🌿'],['mollusc','Moluscos','🐚']];
 const KEY='alimentacert_pro_v2'; let S=JSON.parse(localStorage.getItem(KEY)||'null')||{company:{},dishes:[],history:[]};let current=null;
-const pages=[['panel','Panel'],['empresa','Empresa y logo'],['platos','Platos'],['editor','Ficha técnica'],['matriz','Tabla de alérgenos'],['qr','QR'],['historial','Historial'],['normativa','Normativa']];
+const pages=[['panel','Panel'],['cuenta','Mi suscripción'],['empresa','Empresa y logo'],['platos','Platos'],['editor','Ficha técnica'],['matriz','Tabla de alérgenos'],['qr','QR'],['historial','Historial'],['normativa','Normativa']];
 function persist(){localStorage.setItem(KEY,JSON.stringify(S));renderStats()}
 function hist(action,detail){S.history.unshift({at:new Date().toLocaleString('es-ES'),action,detail});S.history=S.history.slice(0,1000);persist();renderHistory()}
 function go(p){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('hide',x.dataset.page!==p));document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('active',x.dataset.p===p));if(p==='platos')renderDishes();if(p==='matriz')renderMatrix();if(p==='historial')renderHistory()}
-function init(){nav.innerHTML=pages.map((x,i)=>`<button data-p="${x[0]}" class="${i?'':'active'}" onclick="go('${x[0]}')">${x[1]}</button>`).join('');renderAllergenPickers();loadCompany();renderDishes();renderStats();renderHistory();qrCompany.textContent=S.company.name||'Tu establecimiento';if(sessionStorage.getItem('ac_preview')==='1')paywall.classList.add('hide')}
-function subscribe(){const u=(window.ALIMENTACERT_CONFIG||{}).stripePaymentLink||'';if(u&&u.startsWith('https://')) location.href=u; else alert('El cobro mensual está preparado, pero falta conectar tu enlace real de Stripe en config.js. No se ha simulado ningún cobro.')}
-function demoUnlock(){sessionStorage.setItem('ac_preview','1');paywall.classList.add('hide')}
+function init(){
+  nav.innerHTML=pages.map((x,i)=>`<button data-p="${x[0]}" class="${i?'':'active'}" onclick="go('${x[0]}')">${x[1]}</button>`).join('');
+  renderAllergenPickers();loadCompany();renderDishes();renderStats();renderHistory();
+  qrCompany.textContent=S.company.name||'Tu establecimiento';
+  refreshSubscription();
+}
+function subscribe(){
+  const u=(window.ALIMENTACERT_CONFIG||{}).stripePaymentLink||'';
+  if(u&&u.startsWith('https://')) location.href=u;
+  else alert('Falta conectar el enlace real de suscripción de Stripe en config.js.');
+}
+async function refreshSubscription(){
+  const cfg=window.ALIMENTACERT_CONFIG||{};
+  const label=document.getElementById('subscriptionLabel');
+  const msg=document.getElementById('subscriptionMessage');
+  // GitHub Pages es estático. La validación real debe venir de un endpoint seguro.
+  if(cfg.subscriptionStatusEndpoint){
+    try{
+      const r=await fetch(cfg.subscriptionStatusEndpoint,{credentials:'include'});
+      if(!r.ok) throw new Error('status');
+      const data=await r.json();
+      applySubscription(data.status||'inactive', data.message||'');
+      return;
+    }catch(e){
+      label.textContent='No se pudo verificar';
+      msg.textContent='Revisa la conexión del backend de suscripciones.';
+      paywall.classList.remove('hide');
+      return;
+    }
+  }
+  applySubscription('setup_required','Falta conectar Stripe + backend para validar pagos reales.');
+}
+function applySubscription(status,message){
+  const label=document.getElementById('subscriptionLabel');
+  const msg=document.getElementById('subscriptionMessage');
+  const active=['active','trialing'].includes(status);
+  const names={active:'Activo',trialing:'Prueba activa',past_due:'Pago pendiente',unpaid:'Impagado',canceled:'Cancelado',expired:'Caducado',inactive:'Inactivo',setup_required:'Configuración pendiente'};
+  if(label) label.textContent=names[status]||status;
+  if(msg) msg.textContent=message||(
+    active?'Tu acceso PRO está habilitado.':
+    status==='past_due'?'Hay un pago pendiente. Regulariza la suscripción para evitar el bloqueo.':
+    status==='unpaid'?'La suscripción está impagada y el acceso PRO está bloqueado.':
+    status==='canceled'?'La suscripción está cancelada.':
+    'Activa tu suscripción para acceder a AlimentaCert PRO.'
+  );
+  paywall.classList.toggle('hide',active);
+}
+function showDemo(){
+  alert('La demostración visual está disponible en la imagen y descripción comercial. El acceso funcional PRO requiere una suscripción validada.');
+}
 function saveCompany(){S.company={name:company.value,taxid:taxid.value,address:address.value,phone:phone.value,email:email.value,logo:S.company.logo||''};persist();hist('Empresa','Datos del establecimiento actualizados');qrCompany.textContent=S.company.name||'Tu establecimiento'}
 function loadCompany(){company.value=S.company.name||'';taxid.value=S.company.taxid||'';address.value=S.company.address||'';phone.value=S.company.phone||'';email.value=S.company.email||'';if(S.company.logo)logoPreview.src=S.company.logo}
 logoFile.addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{S.company.logo=r.result;logoPreview.src=r.result;persist();hist('Logo','Logo del establecimiento actualizado')};r.readAsDataURL(f)})

@@ -1,15 +1,33 @@
-ALIMENTACERT — PAQUETE MULTIDIOMA LISTO
+ALIMENTACERT PRO — PAQUETE FINAL
 
-ARCHIVOS PARA SUBIR A GITHUB (los 4 HTML):
-- index.html       = Español
-- index-en.html    = English
-- index-ru.html    = Русский
-- index-ar.html    = العربية (RTL)
+QUÉ CAMBIA AL SUBIRLO
+- La portada deja de anunciar los alérgenos como herramienta gratuita.
+- AlimentaCert PRO se presenta a 12,90 €/mes.
+- Se integra la imagen publicitaria aprobada.
+- La página PRO contiene: platos ilimitados, empresa/logo, 14 alérgenos, trazas,
+  ficha técnica, ingredientes/cantidades, elaboración, nutrición, escandallo,
+  matriz, PDF/impresión, QR, edición/duplicado, historial y backup.
+- Se añade la pantalla “Mi suscripción” con estados Activo, Pago pendiente,
+  Impagado, Cancelado y Caducado.
 
-El selector de idioma enlaza entre las cuatro páginas.
-Las imágenes se incluyen para que el paquete sea autocontenido. Si ya existen en el repositorio, no es necesario volver a subirlas.
+PARA SUBIR AHORA A GITHUB
+1. Descomprime este ZIP.
+2. En alimentacert-web: Add file > Upload files.
+3. Arrastra TODOS los archivos y carpetas de este paquete.
+4. Commit changes.
+5. Espera el despliegue y pulsa Ctrl+F5 en la web.
 
-IMPORTANTE:
-- Este paquete traduce la PORTADA completa.
-- El botón de examen sigue apuntando al archivo existente alimentacert_academia_integrada.html.
-- No cambia Supabase, pagos ni el examen actual.
+PAGO REAL
+El diseño y la lógica están preparados. Para cobrar de verdad:
+- crea un Payment Link de Stripe de 12,90 €/mes;
+- pégalo en config.js.
+
+BLOQUEO REAL POR IMPAGO
+El paquete incluye el esquema y funciones de backend para Supabase/Stripe.
+Para que el bloqueo sea seguro hay que configurar una vez Supabase, desplegar
+las Edge Functions y conectar el webhook de Stripe. Esto no puede sustituirse
+de forma segura por un simple HTML en GitHub Pages.
+
+IMPORTANTE
+No pongas claves secretas de Stripe ni la service_role de Supabase en config.js
+ni en GitHub Pages. Esas claves van únicamente como secretos del backend.
