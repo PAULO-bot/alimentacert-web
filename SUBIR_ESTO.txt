@@ -1,1 +1,4 @@
-Sube TODO el contenido a la raíz de alimentacert-web y reemplaza los archivos existentes. Incluye las 4 banderas SVG.
+PAQUETE LIGERO
+Sube SOLO estos archivos a la raíz de alimentacert-web y reemplaza los existentes.
+NO borres ni vuelvas a subir las fotos JPG: ya están en GitHub.
+Después: Commit changes y Ctrl+F5.

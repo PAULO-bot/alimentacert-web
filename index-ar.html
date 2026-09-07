@@ -1,38 +1,66 @@
 <!doctype html>
-<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AlimentaCert — تدريب متداولي الأغذية</title><meta name="description" content="ادرس مجانًا. أدِّ الاختبار مجانًا. ادفع فقط بعد النجاح إذا رغبت في إصدار شهادة تدريب قابلة للتحقق.">
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AlimentaCert</title>
 <style>
-:root{--o:#ff6500;--ink:#171717;--mut:#646b74;--cream:#fff7ef;--line:#eee4da;--green:#13795b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
-header{min-height:70px;display:flex;align-items:center;justify-content:space-between;padding:10px 5%;border-bottom:1px solid #eee;background:#fff;position:sticky;top:0;z-index:20;gap:18px}.logo{font-size:25px;font-weight:900;white-space:nowrap}.logo b{color:var(--o)}nav{display:flex;gap:18px;align-items:center;font-weight:700;font-size:14px;flex-wrap:wrap;justify-content:flex-end}.lang{border:1px solid #ddd;border-radius:10px;padding:10px 30px 10px 10px;background:#fff;font-weight:800;color:#222;cursor:pointer}.btn{display:inline-block;background:var(--o);color:#fff;border:0;border-radius:13px;padding:14px 19px;font-weight:900;text-decoration:none;cursor:pointer}.ghost{background:#fff;color:#222;border:1px solid #ddd}
-.hero{max-width:1200px;margin:auto;padding:54px 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.kicker{color:var(--o);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:12px}.hero h1{font-size:58px;line-height:.98;letter-spacing:-2.7px;margin:13px 0 18px}.hero p{font-size:19px;line-height:1.55;color:var(--mut);max-width:650px}.heroimg{position:relative}.heroimg img{width:100%;height:520px;object-fit:cover;border-radius:30px}.price{position:absolute;bottom:20px;left:20px;background:#fff;padding:16px 20px;border-radius:17px;box-shadow:0 10px 35px #0002}.price strong{font-size:34px;color:var(--o)}.checks{display:flex;gap:16px;flex-wrap:wrap;margin:22px 0;color:#3e454d;font-size:14px;font-weight:700}.checks span:before{content:"✓";color:var(--green);margin-right:6px}.actions{display:flex;gap:10px;flex-wrap:wrap}.band{background:#171717;color:#fff}.stats{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:24px}.stat{text-align:center;border-right:1px solid #ffffff22}.stat:last-child{border:0}.stat b{display:block;font-size:24px}.stat small{color:#bbb}
-section{padding:70px 24px}.wrap{max-width:1100px;margin:auto}.title{text-align:center;max-width:760px;margin:0 auto 34px}.title h2{font-size:40px;letter-spacing:-1.5px;margin:0 0 10px}.title p{color:var(--mut);line-height:1.6}.steps,.photos,.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff}.num{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff0e5;color:var(--o);font-weight:900}.card h3{font-size:20px}.card p{color:var(--mut);line-height:1.55}.photos .card{padding:0;overflow:hidden}.photos img{width:100%;height:210px;object-fit:cover}.photos .txt{padding:20px}.course{background:var(--cream)}.modules{display:grid;grid-template-columns:1fr 1fr;gap:12px}.module{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}.module b{color:var(--o);margin-right:8px}.cert{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.paper{background:#fff;border:8px double #e6d7c8;box-shadow:0 20px 55px #0001;padding:42px;text-align:center;min-height:430px}.paper .seal{font-size:42px}.paper h3{font-family:Georgia,serif;font-size:28px}.paper .name{font-family:Georgia,serif;font-size:25px;border-bottom:1px solid #999;padding:12px}.qr{margin:18px auto;width:72px;height:72px;background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 50%/18px 18px}.faq details{max-width:850px;margin:10px auto;border:1px solid var(--line);border-radius:14px;padding:17px;background:#fff}summary{font-weight:800;cursor:pointer}.faq p{color:var(--mut)}.final{background:#171717;color:#fff;text-align:center}.final h2{font-size:42px;margin:0 0 10px}.final p{color:#bbb}.mobilebar{display:none}table{direction:inherit}
-html[dir="rtl"] body{text-align:right}html[dir="rtl"] .price{left:auto;right:20px}html[dir="rtl"] .module b{margin-right:0;margin-left:8px}html[dir="rtl"] .checks span:before{margin-right:0;margin-left:6px}html[dir="rtl"] .title,html[dir="rtl"] .paper,html[dir="rtl"] .final{text-align:center}
-@media(max-width:900px){header{align-items:flex-start}.logo{padding-top:8px}nav{gap:10px}.hero h1{font-size:50px}}
-@media(max-width:760px){header{padding:9px 14px;align-items:center}nav a:not(.btn){display:none}.lang{max-width:120px}.hero{grid-template-columns:1fr;padding:35px 18px}.hero h1{font-size:42px}.heroimg img{height:360px}.stats{grid-template-columns:1fr 1fr;gap:18px}.stat{border:0}.steps,.photos,.features,.modules,.cert{grid-template-columns:1fr}.title h2{font-size:32px}.mobilebar{display:block;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;padding:10px;z-index:30}.mobilebar .btn{width:100%;text-align:center}}
-</style><style>
-.ac-langfix{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
-.ac-langfix a{padding:7px 10px;border:1px solid #ddd;border-radius:10px;text-decoration:none;color:inherit;background:#fff}
-.ac-allergen-fix{max-width:1100px;margin:30px auto;padding:0 20px}
-.ac-allergen-box{background:#fff7f0;border:1px solid #f0d7c3;border-radius:20px;padding:26px}
-.ac-allergen-box h2{margin-top:0}
-</style><style id="ac-flag-style">
-.ac-flagbar{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;padding:10px}
-.ac-flagbar a{display:flex;align-items:center;gap:6px;padding:7px 10px;border:1px solid #ddd;border-radius:10px;text-decoration:none;color:inherit;background:#fff}
-.ac-flagbar img{width:24px;height:16px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
-</style></head><body><div class="ac-flagbar" aria-label="Language selector">
-<a href="index.html"><img src="flag-es.svg" alt="Español"> Español</a>
-<a href="index-en.html"><img src="flag-en.svg" alt="English"> English</a>
-<a href="index-ru.html"><img src="flag-ru.svg" alt="Русский"> Русский</a>
-<a href="index-ar.html"><img src="flag-ar.svg" alt="العربية"> العربية</a>
-</div>
-<header><div class="logo"><b>Alimenta</b>Cert</div><nav><a href="#curso">المنهج</a><a href="#certificado">الشهادة</a><a href="#empresas">للشركات</a><select class="lang" aria-label="Language" onchange="if(this.value) window.location.href=this.value"><option value="index.html">Español</option><option value="index-en.html">English</option><option value="index-ru.html">Русский</option><option value="index-ar.html" selected>العربية</option></select><a class="btn" href="#examen">ابدأ الاختبار مجانًا</a></nav></header>
-<main><div class="hero"><div><div class="kicker">دورة عبر الإنترنت · إسبانيا · محدثة 2026</div><h1>تدريب متداولي الأغذية: سهل التعلّم وسريع للحصول على الشهادة.</h1><p>ادرس مجانًا. أدِّ الاختبار مجانًا. <b>ادفع فقط بعد النجاح</b> إذا رغبت في إصدار شهادة تدريب قابلة للتحقق.</p><div class="checks"><span>لا حاجة للتسجيل للبدء</span><span>محاولات غير محدودة</span><span>100% عبر الإنترنت</span><span>ES · EN · RU · AR</span></div><div class="actions"><a class="btn" href="#examen">ابدأ الاختبار مجانًا</a><a class="btn ghost" href="#curso">عرض المنهج</a></div></div><div class="heroimg"><img src="alimentacert_foto_hero.jpg" alt=""><div class="price"><small>الشهادة بعد النجاح</small><br><strong>9,90 €</strong> <small>شامل الضريبة*</small></div></div></div>
-<div class="band"><div class="stats"><div class="stat"><b>8</b><small>وحدات عملية</small></div><div class="stat"><b>20</b><small>سؤالًا نهائيًا</small></div><div class="stat"><b>80%</b><small>للنجاح</small></div><div class="stat"><b>4</b><small>لغات</small></div></div></div>
-<section><div class="wrap"><div class="title"><h2>احصل عليها في 3 خطوات</h2><p>مصممة لتتعلم ما تحتاجه دون تعقيدات إدارية.</p></div><div class="steps"><div class="card"><div class="num">1</div><h3>تعلّم مجانًا</h3><p>دروس قصيرة وواضحة، أمثلة واقعية ومحتوى ملائم للعمل مع الأغذية.</p></div><div class="card"><div class="num">2</div><h3>انجح مجانًا</h3><p>20 سؤالًا عشوائيًا. يمكنك إعادة الاختبار مجانًا حتى تصل إلى 80%.</p></div><div class="card"><div class="num">3</div><h3>أصدر شهادتك</h3><p>بعد النجاح أدخل بياناتك، ادفع واستلم شهادة قابلة للتحقق.</p></div></div></div></section>
-<section class="course" id="curso"><div class="wrap"><div class="title"><div class="kicker">المحتوى الرئيسي</div><h2>دورة قصيرة ومرئية ومفيدة فعلًا</h2><p>لا نريد ملف PDF طويلًا بلا نهاية. كل وحدة تشرح ما يجب فعله، ولماذا، وما الأخطاء التي يجب تجنبها.</p></div><div class="photos"><div class="card"><img src="alimentacert_foto_hygiene.jpg" alt=""><div class="txt"><h3>النظافة الشخصية</h3><p>اليدان، الملابس، الجروح، الأعراض والعادات الآمنة.</p></div></div><div class="card"><img src="alimentacert_foto_work.jpg" alt=""><div class="txt"><h3>العمل الآمن</h3><p>التلوث المتبادل، التنظيم والممارسات الجيدة.</p></div></div><div class="card"><img src="alimentacert_foto_fridge.jpg" alt=""><div class="txt"><h3>الحفظ والتخزين</h3><p>سلسلة التبريد، الاستلام، التخزين والرقابة.</p></div></div></div><br><div class="modules"><div class="module"><b>01</b> سلامة الأغذية والمسؤولية</div><div class="module"><b>02</b> المخاطر البيولوجية والكيميائية والفيزيائية</div><div class="module"><b>03</b> النظافة الشخصية وغسل اليدين</div><div class="module"><b>04</b> التلوث المتبادل ومسببات الحساسية</div><div class="module"><b>05</b> الوقت ودرجة الحرارة وسلسلة التبريد</div><div class="module"><b>06</b> التنظيف والتطهير ومكافحة الآفات</div><div class="module"><b>07</b> المعلومات والتتبع والتخزين</div><div class="module"><b>08</b> نظام HACCP وثقافة سلامة الأغذية</div></div></div></section>
-<section id="examen"><div class="wrap"><div class="title"><div class="kicker">بدون مخاطرة</div><h2>انجح أولًا، ثم قرر ما إذا كنت تريد الدفع.</h2><p>20 سؤال اختيار من متعدد، ثلاثة خيارات لكل سؤال، نسبة نجاح 80% ومحاولات غير محدودة. في النسخة النهائية ستُسجَّل كل محاولة مع نسخة المحتوى الخاصة بها.</p><a class="btn" href="alimentacert_academia_integrada.html">جرّب الاختبار الآن</a></div></div></section>
-<section id="certificado"><div class="wrap cert"><div><div class="kicker">وثيقة قابلة للتحقق</div><h2 style="font-size:40px">شهادة احترافية قابلة للتحقق عبر الإنترنت.</h2><p>الاسم الكامل، DNI/NIE، التاريخ، محتوى التدريب، الجهة المصدرة، رمز فريد وQR للتحقق. لن يعرض التحقق العام رقم وثيقة الهوية كاملًا.</p><div class="checks"><span>PDF فوري</span><span>رمز فريد</span><span>QR عام</span><span>خصوصية DNI/NIE</span></div></div><div class="paper"><div class="seal">✓</div><small>ALIMENTACERT · تدريب سلامة الأغذية</small><h3>شهادة تدريب متداولي الأغذية</h3><p>نشهد بأن</p><div class="name">اسم المتدرب</div><p>قد أتم بنجاح التدريب والتقييم المقابلين.</p><div class="qr"></div><small>الرمز: AC-2026-XXXXXX · تحقق عبر الإنترنت</small></div></div></section>
-<section id="empresas" style="background:#fff7ef"><div class="wrap"><div class="title"><div class="kicker">ALIMENTACERT للشركات</div><h2>درّب فريقك بالكامل من لوحة واحدة</h2><p>المطاعم والفنادق والمقاهي وخدمات التموين والسوبرماركت وشركات الأغذية. اشترِ مقاعد، ادعُ الموظفين وتابع التقدم والشهادات.</p></div><div class="steps"><div class="card"><div class="num">10</div><h3>فريق صغير</h3><p>10 مقاعد · سعر تجريبي 79 €</p><a class="btn" href="#empresa-demo">طلب الوصول</a></div><div class="card" style="border:2px solid #ff6500"><div class="num">25</div><h3>فريق احترافي</h3><p>25 مقعدًا · سعر تجريبي 169 €</p><a class="btn" href="#empresa-demo">طلب الوصول</a></div><div class="card"><div class="num">50</div><h3>شركة</h3><p>50 مقعدًا · سعر تجريبي 299 €</p><a class="btn" href="#empresa-demo">طلب الوصول</a></div></div><div id="empresa-demo" class="card" style="margin-top:20px"><h3>لوحة الشركة — نموذج أولي</h3><p><b>المقاعد:</b> 25 · <b>المعيّنة:</b> 18 · <b>الناجحون:</b> 14 · <b>المعلّقة:</b> 4</p><div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><tr><th style="text-align:right;padding:10px">الموظف</th><th style="text-align:right;padding:10px">الدورة</th><th style="text-align:right;padding:10px">الحالة</th><th style="text-align:right;padding:10px">الشهادة</th></tr><tr><td style="padding:10px">ماريا غ.</td><td style="padding:10px">تداول الأغذية</td><td style="padding:10px">✓ ناجح</td><td style="padding:10px">تنزيل</td></tr><tr><td style="padding:10px">دافيد ر.</td><td style="padding:10px">تداول الأغذية</td><td style="padding:10px">قيد التقدم</td><td style="padding:10px">—</td></tr><tr><td style="padding:10px">سارة أ.</td><td style="padding:10px">مسببات الحساسية</td><td style="padding:10px">✓ ناجح</td><td style="padding:10px">تنزيل</td></tr></table></div></div></div></section>
-<section class="faq"><div class="wrap"><div class="title"><h2>الأسئلة الشائعة</h2></div><details open><summary>هل الدورة «معتمدة من AESAN»؟</summary><p>لا نستخدم هذا الادعاء. توضّح AESAN أن الجهات التي تقدم هذا التدريب لا تحتاج إلى اعتماد أو ترخيص إداري، ولا ينبغي أن تقدم نفسها على أنها معتمدة أو مدعومة من AESAN.</p></details><details><summary>هل يجب أن أدفع قبل الاختبار؟</summary><p>لا. صُممت AlimentaCert بحيث تدرس وتؤدي الاختبار مجانًا؛ ولا يتم الدفع إلا بعد النجاح إذا رغبت في إصدار الشهادة.</p></details><details><summary>هل يمكنني إعادة الاختبار؟</summary><p>نعم. يتيح التصميم محاولات مجانية غير محدودة قبل إصدار الشهادة.</p></details><details><summary>ما اللغات المتاحة؟</summary><p>الإسبانية والإنجليزية والروسية والعربية. ستظهر الأسئلة والإجابات مباشرة باللغة المختارة.</p></details></div></section>
-<section class="final"><div class="wrap"><h2>ابدأ مجانًا. ادفع فقط بعد النجاح.</h2><p>تدريب متداولي الأغذية · 9.90 € لإصدار الشهادة.</p><a class="btn" href="#examen">ابدأ الاختبار مجانًا</a></div></section></main><div class="mobilebar"><a class="btn" href="#examen">ابدأ الاختبار مجانًا · 9.90 € بعد النجاح</a></div></body></html>
+:root{--orange:#ef8d22;--ink:#202838;--muted:#6e7684;--cream:#fbf7f2;--line:#e7e1da}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
+.top{background:#202631;color:#fff;text-align:center;padding:7px;font-size:13px}
+.wrap{max-width:1120px;margin:auto;padding:0 22px}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-size:24px;font-weight:800}.brand span{color:var(--orange)}
+.navlinks{display:flex;gap:20px}.navlinks a{text-decoration:none;color:var(--ink);font-size:14px}
+.right{display:flex;align-items:center;gap:10px}.cta{background:var(--orange);color:#fff;text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:700}
+.lang{position:relative}.lang button{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;cursor:pointer}
+.lang img{width:22px;height:15px;border-radius:2px;box-shadow:0 0 0 1px #bbb}
+.menu{display:none;position:absolute;top:44px;right:0;min-width:180px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px #0002;overflow:hidden}
+html[dir=rtl] .menu{right:auto;left:0}.lang.open .menu{display:block}
+.menu a{display:flex;gap:8px;align-items:center;padding:10px 12px;text-decoration:none;color:var(--ink)}.menu a:hover{background:#faf6f1}
+.hero{background:linear-gradient(#fff,#fbf7f2);padding:64px 0 48px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.kicker{font-size:13px;font-weight:700;color:#cb6c22;letter-spacing:.08em}h1{font-size:48px;line-height:1.03;margin:14px 0 18px;letter-spacing:-.03em}
+.lead{font-size:18px;line-height:1.55;color:var(--muted)}.actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:22px}.secondary{color:var(--ink);font-weight:700;text-decoration:none}
+.photo{position:relative}.photo img{width:100%;border-radius:26px;display:block}.price{position:absolute;bottom:16px;left:16px;background:#fff;padding:12px 15px;border-radius:13px;box-shadow:0 8px 24px #0002}html[dir=rtl] .price{left:auto;right:16px}
+.price strong{display:block;font-size:28px;color:var(--orange)}.price small{color:var(--muted)}
+.stats{background:#202631;color:#fff}.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:12px;padding-top:18px;padding-bottom:18px}.stats b{display:block;font-size:24px}
+.allergens{padding:56px 0}.allbox{background:#fff6ec;border:1px solid #f2d6bb;border-radius:22px;padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.allbox h2{font-size:32px;margin:0 0 10px}.allbox p{margin:0;color:var(--muted);line-height:1.55}
+@media(max-width:850px){.navlinks{display:none}.grid{grid-template-columns:1fr}h1{font-size:38px}.stats .wrap{grid-template-columns:1fr 1fr}.allbox{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top">AlimentaCert · 9,90 €</div>
+<header><div class="wrap nav">
+<div class="brand"><span>Alimenta</span> Cert</div>
+<nav class="navlinks"><a href="#programa">البرنامج</a><a href="#certificado">الشهادة</a><a href="#empresas">للشركات</a></nav>
+<div class="right">
+<div class="lang" id="lang"><button id="langBtn" type="button"><img src="flag-ar.svg" alt=""> العربية ▾</button>
+<div class="menu">
+<a href="index.html"><img src="flag-es.svg" alt=""> Español</a>
+<a href="index-en.html"><img src="flag-en.svg" alt=""> English</a>
+<a href="index-ru.html"><img src="flag-ru.svg" alt=""> Русский</a>
+<a href="index-ar.html"><img src="flag-ar.svg" alt=""> العربية</a>
+</div></div>
+<a class="cta" href="#examen">أدِّ الاختبار المجاني</a>
+</div></div></header>
+
+<section class="hero" id="programa"><div class="wrap grid">
+<div><div class="kicker">دورة عبر الإنترنت · إسبانيا · محدثة لعام 2026</div><h1>تدريب على تداول الأغذية: سهل التعلّم وشهادة سريعة.</h1><p class="lead">ادرس مجانًا. أدِّ الاختبار مجانًا. ادفع فقط بعد النجاح إذا رغبت في الحصول على شهادة إتمام قابلة للتحقق.</p>
+<div class="actions"><a class="cta" href="#examen">أدِّ الاختبار المجاني</a><a class="secondary" href="#programa">عرض البرنامج</a></div></div>
+<div class="photo"><img src="alimentacert_foto_hero.jpg" alt=""><div class="price"><small>الشهادة عند الإكمال</small><strong>9.90 €</strong><small>شامل الضريبة*</small></div></div>
+</div></section>
+
+<section class="stats"><div class="wrap">
+<div><b>8</b>8 وحدات عملية</div><div><b>20</b>20 سؤالًا نهائيًا</div><div><b>80%</b>80% للنجاح</div><div><b>4</b>4 لغات</div>
+</div></section>
+
+<section class="allergens" id="alergenos"><div class="wrap"><div class="allbox">
+<div><h2>مسببات الحساسية وعدم التحمل</h2><p>يشمل التدريب مسببات الحساسية الأربعة عشر الواجب التصريح عنها، ومنع التلوث التبادلي، وتقديم المعلومات للمستهلك، وممارسات التداول الآمن للأغذية.</p></div><a class="cta" href="#alergenos">عرض محتوى مسببات الحساسية</a>
+</div></div></section>
+
+<script>
+const lang=document.getElementById('lang'),btn=document.getElementById('langBtn');
+btn.onclick=(e)=>{e.stopPropagation();lang.classList.toggle('open')};
+document.onclick=()=>lang.classList.remove('open');
+</script>
+</body></html>
