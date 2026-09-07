@@ -1,6 +1,6 @@
+// AlimentaCert PRO — configuración de cobro
+// Pega aquí el Payment Link de Stripe configurado como SUSCRIPCIÓN mensual.
+// Ejemplo: stripePaymentLink: "https://buy.stripe.com/..."
 window.ALIMENTACERT_CONFIG = {
-  supabaseUrl: 'https://yryxmwvqcqelrpcoqqsb.supabase.co',
-  supabasePublishableKey: '', // pegar clave publicable; nunca service_role
-  checkoutEndpoint: '', // https://...supabase.co/functions/v1/create-checkout
-  verifyEndpoint: '' // https://...supabase.co/functions/v1/certificate
+  stripePaymentLink: ""
 };
