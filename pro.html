@@ -16,7 +16,7 @@ header{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;ali
 </style>
 </head><body>
 <header><div class="brand"><b>Alimenta</b>Cert <span style="font-size:11px;background:#171717;color:#fff;padding:4px 7px;border-radius:7px">PRO</span></div><div class="top"><button class="btn ghost small" onclick="exportBackup()">Copia de seguridad</button><button class="btn small" onclick="window.print()">PDF / imprimir</button></div></header>
-<section class="hero"><div class="heroin"><div><div class="ey">SOFTWARE PARA HOSTELERÍA · ESPAÑA</div><h1>Alérgenos, fichas y nutrición en un solo sitio.</h1><p>Platos ilimitados, logo, 14 alérgenos, trazas, ficha técnica, valores nutricionales, QR público, modificaciones e historial.</p><span class="pill">14 alérgenos UE</span><span class="pill">Trazas separadas</span><span class="pill">PDF profesional</span><span class="pill">Historial</span></div><div><img src="alimentacert-pro-publicidad.png" alt="AlimentaCert PRO" style="width:100%;border-radius:18px;margin-bottom:14px"><div class="price"><small>PLAN PROFESIONAL</small><div><strong>12,90 €</strong> / mes</div><ul><li>Platos ilimitados</li><li>PDF, fichas y QR</li><li>Historial de cambios</li><li>Sin permanencia</li></ul><button class="btn" onclick="subscribe()">Suscribirme</button></div></div></div></section>
+<section class="hero"><div class="heroin"><div><div class="ey">SOFTWARE PARA HOSTELERÍA · ESPAÑA</div><h1>Alérgenos, fichas y nutrición en un solo sitio.</h1><p>Platos ilimitados, logo, 14 alérgenos, trazas, ficha técnica, valores nutricionales, QR público, modificaciones e historial.</p><span class="pill">14 alérgenos UE</span><span class="pill">Trazas separadas</span><span class="pill">PDF profesional</span><span class="pill">Historial</span></div><div><img src="alimentacert-pro-publicidad-4-idiomas.png" alt="AlimentaCert PRO" style="width:100%;border-radius:18px;margin-bottom:14px"><div class="price"><small>PLAN PROFESIONAL</small><div><strong>12,90 €</strong> / mes</div><ul><li>Platos ilimitados</li><li>PDF, fichas y QR</li><li>Historial de cambios</li><li>Sin permanencia</li></ul><button class="btn" onclick="subscribe()">Suscribirme</button></div></div></div></section>
 <div class="shell">
 <nav class="nav" id="nav"></nav>
 <main class="main">
@@ -48,9 +48,14 @@ header{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;ali
 <h3>Información nutricional por porción</h3><div class="grid3"><div class="field"><label>Energía (kcal)</label><input id="nKcal" type="number"></div><div class="field"><label>Grasas (g)</label><input id="nFat" type="number" step=".1"></div><div class="field"><label>Saturadas (g)</label><input id="nSat" type="number" step=".1"></div><div class="field"><label>Hidratos (g)</label><input id="nCarb" type="number" step=".1"></div><div class="field"><label>Azúcares (g)</label><input id="nSugar" type="number" step=".1"></div><div class="field"><label>Proteínas (g)</label><input id="nProtein" type="number" step=".1"></div><div class="field"><label>Fibra (g)</label><input id="nFiber" type="number" step=".1"></div><div class="field"><label>Sal (g)</label><input id="nSalt" type="number" step=".1"></div><div class="field"><label>Coste/escandallo (€)</label><input id="dCost" type="number" step=".01"></div></div>
 <div class="actions"><button class="btn" onclick="saveDish()">Guardar cambios</button><button class="btn ghost" onclick="printSheet()">Imprimir ficha</button></div></div></section>
 
-<section class="card page hide" data-page="matriz"><h2>Matriz de alérgenos</h2><div class="sub">Vista general para revisión e impresión.</div><div class="tablewrap" id="matrix"></div><div class="actions"><button class="btn" onclick="window.print()">Generar PDF / imprimir</button></div></section>
+<section class="card page hide" data-page="matriz"><h2>Matriz de alérgenos multilingüe</h2><div class="sub">Crea una vez tus platos y genera la tabla para tus clientes en 4 idiomas.</div>
+<div class="actions noPrint"><label style="font-weight:900">Idioma del documento:</label>
+<select id="outputLang" onchange="renderMatrix()" style="padding:9px;border:1px solid #ddd;border-radius:10px">
+<option value="es">🇪🇸 Español</option><option value="en">🇬🇧 English</option><option value="ar">🇸🇦 العربية</option><option value="ru">🇷🇺 Русский</option></select>
+<button class="btn" onclick="window.print()">Generar PDF / imprimir</button></div>
+<div class="tablewrap" id="matrix"></div></section>
 
-<section class="card page hide" data-page="qr"><h2>QR de consulta</h2><div class="sub">Genera un QR que apunte a la URL pública de tu carta o tabla.</div><div class="field"><label>URL pública</label><input id="publicUrl" placeholder="https://tudominio.es/carta/..."></div><div class="actions"><button class="btn" onclick="makeQR()">Generar QR</button></div><div class="qrbox"><img id="qrImg" alt="QR"><div><b id="qrCompany"></b><p class="sub">Puedes descargar la imagen del QR desde el navegador y colocarla en carta, mostrador o mesas.</p></div></div></section>
+<section class="card page hide" data-page="qr"><h2>QR de consulta</h2><div class="sub">Genera un QR para tu carta o tabla pública. El cliente puede consultar la información en Español, English, العربية o Русский.</div><div class="field"><label>URL pública</label><input id="publicUrl" placeholder="https://tudominio.es/carta/..."></div><div class="actions"><button class="btn" onclick="makeQR()">Generar QR</button></div><div class="qrbox"><img id="qrImg" alt="QR"><div><b id="qrCompany"></b><p class="sub">Puedes descargar la imagen del QR desde el navegador y colocarla en carta, mostrador o mesas.</p></div></div></section>
 
 <section class="card page hide" data-page="historial"><h2>Historial de modificaciones</h2><div class="sub">Registro local de altas, cambios, duplicados y eliminaciones.</div><div class="actions"><button class="btn ghost" onclick="exportHistory()">Exportar historial</button></div><div class="tablewrap history"><table><thead><tr><th>Fecha</th><th>Acción</th><th>Detalle</th></tr></thead><tbody id="historyRows"></tbody></table></div></section>
 
@@ -61,6 +66,18 @@ header{height:70px;background:#fff;border-bottom:1px solid #eee;display:flex;ali
 <script src="config.js"></script>
 <script>
 const A=[['gluten','Gluten','🌾'],['crust','Crustáceos','🦐'],['egg','Huevos','🥚'],['fish','Pescado','🐟'],['peanut','Cacahuetes','🥜'],['soy','Soja','🫘'],['milk','Leche','🥛'],['nuts','Frutos de cáscara','🌰'],['celery','Apio','🥬'],['mustard','Mostaza','🟡'],['sesame','Sésamo','⚪'],['sulfites','Sulfitos','SO₂'],['lupin','Altramuces','🌿'],['mollusc','Moluscos','🐚']];
+
+const LANG={
+es:{dish:'Plato',contains:'contiene',trace:'posible traza',verify:'Verificar siempre con la receta, etiquetas y documentación real.',cat:'Categoría',
+names:{gluten:'Gluten',crust:'Crustáceos',egg:'Huevos',fish:'Pescado',peanut:'Cacahuetes',soy:'Soja',milk:'Leche',nuts:'Frutos de cáscara',celery:'Apio',mustard:'Mostaza',sesame:'Sésamo',sulfites:'Sulfitos',lupin:'Altramuces',mollusc:'Moluscos'}},
+en:{dish:'Dish',contains:'contains',trace:'possible trace',verify:'Always verify against the actual recipe, labels and supplier documentation.',cat:'Category',
+names:{gluten:'Gluten',crust:'Crustaceans',egg:'Eggs',fish:'Fish',peanut:'Peanuts',soy:'Soybeans',milk:'Milk',nuts:'Tree nuts',celery:'Celery',mustard:'Mustard',sesame:'Sesame',sulfites:'Sulphites',lupin:'Lupin',mollusc:'Molluscs'}},
+ar:{dish:'الطبق',contains:'يحتوي',trace:'آثار محتملة',verify:'يجب التحقق دائمًا من الوصفة الفعلية والملصقات ووثائق المورد.',cat:'الفئة',
+names:{gluten:'الغلوتين',crust:'القشريات',egg:'البيض',fish:'السمك',peanut:'الفول السوداني',soy:'فول الصويا',milk:'الحليب',nuts:'المكسرات',celery:'الكرفس',mustard:'الخردل',sesame:'السمسم',sulfites:'الكبريتيت',lupin:'الترمس',mollusc:'الرخويات'}},
+ru:{dish:'Блюдо',contains:'содержит',trace:'возможные следы',verify:'Всегда сверяйте данные с фактическим рецептом, этикетками и документацией поставщика.',cat:'Категория',
+names:{gluten:'Глютен',crust:'Ракообразные',egg:'Яйца',fish:'Рыба',peanut:'Арахис',soy:'Соя',milk:'Молоко',nuts:'Орехи',celery:'Сельдерей',mustard:'Горчица',sesame:'Кунжут',sulfites:'Сульфиты',lupin:'Люпин',mollusc:'Моллюски'}}
+};
+
 const KEY='alimentacert_pro_v2'; let S=JSON.parse(localStorage.getItem(KEY)||'null')||{company:{},dishes:[],history:[]};let current=null;
 const pages=[['panel','Panel'],['cuenta','Mi suscripción'],['empresa','Empresa y logo'],['platos','Platos'],['editor','Ficha técnica'],['matriz','Tabla de alérgenos'],['qr','QR'],['historial','Historial'],['normativa','Normativa']];
 function persist(){localStorage.setItem(KEY,JSON.stringify(S));renderStats()}
@@ -130,7 +147,14 @@ function delDish(id){const d=S.dishes.find(x=>x.id===id);if(!d||!confirm('¿Elim
 function dupDish(id){const d=S.dishes.find(x=>x.id===id);if(!d)return;let n=JSON.parse(JSON.stringify(d));n.id=Date.now()+Math.random();n.name+=' (copia)';S.dishes.unshift(n);persist();hist('Duplicado',n.name);renderDishes()}
 function renderDishes(){dishRows.innerHTML=S.dishes.map(d=>`<tr><td><b>${esc(d.name)}</b></td><td>${esc(d.cat)}</td><td>${d.grams?esc(d.grams)+' g':'—'}</td><td>${d.allergens.length}</td><td><span class="tag">${d.ingredients?'Ficha iniciada':'Pendiente'}</span></td><td><button class="btn small" onclick="editDish(${d.id})">Editar</button> <button class="btn ghost small" onclick="dupDish(${d.id})">Duplicar</button> <button class="btn red small" onclick="delDish(${d.id})">×</button></td></tr>`).join('')||'<tr><td colspan="6">Todavía no hay platos.</td></tr>'}
 function renderStats(){sDishes.textContent=S.dishes.length;sAll.textContent=S.dishes.filter(d=>d.allergens.length).length;sSheets.textContent=S.dishes.filter(d=>d.ingredients&&d.name).length;sHist.textContent=S.history.length}
-function renderMatrix(){let head=A.map(a=>`<th title="${a[1]}">${a[2]}<br>${a[1]}</th>`).join('');let rows=S.dishes.map(d=>`<tr><td><b>${esc(d.name)}</b><br><small>${esc(d.cat)}</small></td>${A.map(a=>`<td style="text-align:center">${d.allergens.includes(a[0])?'✓':d.traces.includes(a[0])?'T':'—'}</td>`).join('')}</tr>`).join('');matrix.innerHTML=`<table><thead><tr><th>Plato</th>${head}</tr></thead><tbody>${rows}</tbody></table><p class="sub">✓ contiene · T posible traza. Verificar siempre con la receta y documentación real.</p>`}
+function renderMatrix(){
+  const lang=(document.getElementById('outputLang')||{}).value||'es';
+  const t=LANG[lang]||LANG.es;
+  let head=A.map(a=>`<th title="${t.names[a[0]]}">${a[2]}<br>${t.names[a[0]]}</th>`).join('');
+  let rows=S.dishes.map(d=>`<tr><td><b>${esc(d.name)}</b><br><small>${esc(d.cat)}</small></td>${A.map(a=>`<td style="text-align:center">${d.allergens.includes(a[0])?'✓':d.traces.includes(a[0])?'T':'—'}</td>`).join('')}</tr>`).join('');
+  matrix.setAttribute('dir',lang==='ar'?'rtl':'ltr');
+  matrix.innerHTML=`<table><thead><tr><th>${t.dish}</th>${head}</tr></thead><tbody>${rows}</tbody></table><p class="sub">✓ ${t.contains} · T ${t.trace}. ${t.verify}</p>`;
+}
 function renderHistory(){historyRows.innerHTML=S.history.map(h=>`<tr><td>${esc(h.at)}</td><td><b>${esc(h.action)}</b></td><td>${esc(h.detail)}</td></tr>`).join('')||'<tr><td colspan="3">Sin cambios registrados.</td></tr>'}
 function makeQR(){let u=publicUrl.value.trim();if(!/^https?:\/\//.test(u)){alert('Introduce una URL pública válida');return}qrImg.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='+encodeURIComponent(u);hist('QR','QR actualizado para '+u)}
 function exportBackup(){download('alimentacert-backup.json',JSON.stringify(S,null,2),'application/json')}

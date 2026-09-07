@@ -1,0 +1,39 @@
+ALIMENTACERT PRO — PAQUETE DEFINITIVO 4 IDIOMAS
+
+INTEGRADO
+- Web AlimentaCert existente + AlimentaCert PRO.
+- Curso/examen/certificado existentes: no se eliminan.
+- Navegación principal: Español / English / العربية / Русский.
+- Publicidad PRO nueva destacando el servicio multilingüe.
+- PRO: 12,90 €/mes.
+- Platos ilimitados.
+- Empresa y logo.
+- 14 alérgenos + trazas.
+- 50 plantillas.
+- Fichas técnicas, ingredientes, cantidades y elaboración.
+- Información nutricional y escandallo.
+- Matriz de alérgenos generable en 4 idiomas.
+- Árabe con dirección RTL en la tabla.
+- PDF/impresión.
+- QR.
+- Edición, duplicación, historial y backup.
+- Estados de suscripción previstos: activo, pago pendiente, impagado, cancelado y caducado.
+- Estructura Supabase/Stripe incluida para convertir el control de suscripción en real.
+
+IMPORTANTE
+La traducción automática del NOMBRE DEL PLATO y de los ingredientes introducidos libremente por el restaurante
+no se inventa: los encabezados, alérgenos y avisos sí están traducidos. Para traducir texto libre automáticamente
+hará falta conectar posteriormente un servicio de traducción/IA o permitir que el restaurante escriba cada versión.
+
+PAGO REAL
+Para cobrar 12,90 €/mes debes conectar tu Payment Link de Stripe en config.js.
+Para bloqueo automático y seguro por impago hay que desplegar Supabase + webhook de Stripe.
+No pongas claves secretas en GitHub Pages.
+
+SUBIR
+1. Descomprime.
+2. GitHub > alimentacert-web > Add file > Upload files.
+3. Arrastra todo el contenido.
+4. Commit changes.
+5. Espera despliegue y Ctrl+F5.
+NO BORRES los archivos index-en.html, index-ar.html ni index-ru.html que ya están en GitHub.

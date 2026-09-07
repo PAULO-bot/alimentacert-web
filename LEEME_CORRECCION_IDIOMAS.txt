@@ -1,0 +1,32 @@
+ALIMENTACERT PRO — CORRECCIÓN DE IDIOMAS
+
+Este paquete corrige el selector de idiomas sin borrar el proyecto existente.
+
+FUNCIONA CON:
+- Español: index.html
+- English: index-en.html
+- العربية: index-ar.html
+- Русский: index-ru.html
+
+IMPORTANTE:
+Los archivos index-en.html, index-ar.html e index-ru.html YA existen en tu GitHub.
+Este paquete NO los sustituye: los conserva y vuelve a enlazarlos desde la portada española.
+
+SUBIDA:
+1. Descomprime el ZIP.
+2. GitHub > alimentacert-web > Add file > Upload files.
+3. Arrastra TODO lo que está dentro de la carpeta descomprimida.
+4. Pulsa Commit changes.
+5. Espera el despliegue y pulsa Ctrl+F5.
+
+NO BORRES ningún archivo existente del repositorio.
+
+Se mantiene:
+- curso y examen
+- certificado
+- AlimentaCert PRO
+- publicidad PRO
+- 12,90 €/mes
+- fichas, alérgenos, trazas, nutrición, QR e historial
+
+El cobro real y el bloqueo automático por impago requieren conectar Stripe y el backend.
