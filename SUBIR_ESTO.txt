@@ -1,9 +1,1 @@
-PAQUETE DE REPARACIÓN TOTAL
-- Corrige navegación ES / EN / RU / AR mediante páginas directas.
-- Mantiene una sección de alérgenos visible en los cuatro idiomas.
-- Conserva imágenes y diseño base.
-- Incluye config/pago/verificación si estaban disponibles.
-
-PARA ACTUALIZAR:
-Sube TODO el contenido de esta carpeta a la raíz del repositorio alimentacert-web,
-acepta reemplazar los archivos con el mismo nombre y haz un único Commit changes.
+Sube TODO el contenido a la raíz de alimentacert-web y reemplaza los archivos existentes. Incluye las 4 banderas SVG.
