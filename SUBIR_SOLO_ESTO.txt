@@ -1,0 +1,12 @@
+ALIMENTACERT — ÚNICO PAQUETE VALIDADO
+
+Sube TODO el contenido de esta carpeta a la raíz del repositorio alimentacert-web
+y acepta reemplazar los archivos existentes. Haz un único Commit changes.
+
+Validado:
+- 1 solo selector de idioma.
+- Español / English / Русский / العربية.
+- Ruso permanece en ruso.
+- Alérgenos aparece en los 4 idiomas.
+- Banderas incluidas.
+- Se mantienen las fotos existentes.
