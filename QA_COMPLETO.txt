@@ -1,0 +1,35 @@
+ALIMENTACERT — INFORME QA FINAL
+
+PASS PASADA 1 — enlaces y recursos locales
+PASS PASADA 2 — portada index.html
+PASS PASADA 2 — portada index-en.html
+PASS PASADA 2 — portada index-ru.html
+PASS PASADA 2 — portada index-ar.html
+PASS PASADA 3 — es/manipulador: 8 módulos + 20 preguntas
+PASS PASADA 3 — en/manipulador: 8 módulos + 20 preguntas
+PASS PASADA 3 — ru/manipulador: 8 módulos + 20 preguntas
+PASS PASADA 3 — ar/manipulador: 8 módulos + 20 preguntas
+PASS PASADA 3 — es/alergenos: 7 módulos + 20 preguntas
+PASS PASADA 3 — en/alergenos: 7 módulos + 20 preguntas
+PASS PASADA 3 — ru/alergenos: 7 módulos + 20 preguntas
+PASS PASADA 3 — ar/alergenos: 7 módulos + 20 preguntas
+PASS PASADA 3 — es/appcc: 8 módulos + 20 preguntas
+PASS PASADA 3 — en/appcc: 8 módulos + 20 preguntas
+PASS PASADA 3 — ru/appcc: 8 módulos + 20 preguntas
+PASS PASADA 3 — ar/appcc: 8 módulos + 20 preguntas
+PASS PASADA 3 — es/limpieza: 6 módulos + 20 preguntas
+PASS PASADA 3 — en/limpieza: 6 módulos + 20 preguntas
+PASS PASADA 3 — ru/limpieza: 6 módulos + 20 preguntas
+PASS PASADA 3 — ar/limpieza: 6 módulos + 20 preguntas
+PASS PASADA 3 — 16 recorridos curso/idioma presentes
+PASS FLUJO — examen bloqueado hasta 100%
+PASS FLUJO — examen de 20 preguntas
+PASS FLUJO — aprobado desde 80%
+PASS FLUJO — reintento
+PASS FLUJO — pasa a pago/certificado
+PASS FLUJO — 15/20 falla, 16/20 aprueba, 20/20 aprueba
+PASS Árabe RTL
+PASS Ruso lang=ru
+
+RESULTADO FINAL: APROBADO
+Incidencias: ninguna
